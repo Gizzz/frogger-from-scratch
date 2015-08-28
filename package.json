@@ -1,0 +1,20 @@
+{
+  "name": "frogger-from-scratch",
+  "version": "1.0.0",
+  "repository": "url",
+  "description": "description here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.0",
+    "grunt-browser-sync": "^2.1.3",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^3.2.0"
+  }
+}

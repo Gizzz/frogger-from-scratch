@@ -1,0 +1,57 @@
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.grid {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.grid .row {
+  font-size: 0;
+}
+.grid .row .col {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #000;
+}
+.grid .row .col .hero {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: yellow;
+}
+.grid .row.water .col {
+  background: #79dcfc;
+}
+.grid .row.brick .col {
+  background: #e6d681;
+}
+.grid .row.grass .col {
+  background: #84e89f;
+}

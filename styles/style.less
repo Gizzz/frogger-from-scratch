@@ -1,0 +1,119 @@
+// =====================
+// vars
+// =====================
+
+@color-water: #79DCFC;
+@color-brick: #E6D681;
+@color-grass: #84E89F;
+
+@color-hero: yellow;
+@color-bug: red;
+
+// =====================
+// resets, overridings
+// =====================
+
+*,
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+// =====================
+// common
+// =====================
+
+body {
+	
+}
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.make-center-horizontal(@element-width) {
+	margin-left: auto;
+	margin-right: auto;
+	width: @element-width;
+}
+
+.make-center() {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// =====================
+// block specific
+// =====================
+
+.grid {
+	.make-center();
+
+	.row {
+		font-size: 0;
+
+		.col {
+			position: relative;
+			display: inline-block;
+			width: 75px;
+			height: 75px;
+			border: 1px solid #000;
+
+			.hero {
+				.make-center();
+
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: @color-hero;
+			}
+		}
+
+		&.water .col {
+			background: @color-water;
+		}
+
+		&.brick .col {
+			background: @color-brick;
+		}
+
+		&.grass .col {
+			background: @color-grass;
+		}
+	}
+}
+
